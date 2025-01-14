@@ -164,8 +164,6 @@ vim.opt.scrolloff = 20
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set('n', '<leader>cq', '<cmd>cclose<CR>', { desc = '[C]lose [Q]uickfix list' })
 vim.keymap.set('n', '<leader>cj', '<cmd>cnext<CR>', { desc = 'Next Quickfix Item' })
 vim.keymap.set('n', '<leader>ck', '<cmd>cprev<CR>', { desc = 'Prev Quickfix Item' })
@@ -904,7 +902,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'ruby', 'query', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
